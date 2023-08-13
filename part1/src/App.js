@@ -659,23 +659,53 @@ import './App.css';
 
 // 
 
-const App = ()=>{
+// const App = ()=>{
   
-  const handleClick = ()=>{
-    console.log('clicked the button');
-    const name=prompt('What is your name?')
-    alert(`Hello, ${name}!`);
+//   const handleClick = ()=>{
+//     console.log('clicked the button');
+//     const name=prompt('What is your name?')
+//     alert(`Hello, ${name}!`);
    
-  }
+//   }
 
-return (
+// return (
 
-  <button onClick={handleClick}>Greet</button>
+//   <button onClick={handleClick}>Greet</button>
  
-);
+// );
+// }
+
+//  Under     Passing state - to child components
+// Sharing state between components
+
+const Panel =({title, children})=>{
+  const [isActive, setisActive]=useState(false);
+  return(
+   <section className="Panel">
+   <h3>{title}</h3>
+   {isActive ? (
+    <p>{children}</p>
+   ) : (
+    <button onClick={() => setisActive(true)}>Show</button>
+   )}
+   </section>
+  );
 }
-
-
+  const App =()=>{
+  return (
+  <>
+  <h2> 
+      Almaty, Kazakhstan
+  </h2>
+  <Panel title="About">
+      With a population of about 2 million, Almaty is Kazakhstan's largest city. From 1929 to 1997, it was its capital city.
+  </Panel>
+  <Panel title="Ethymology">
+      The name comes from <span lang="kk-KZ">алма</span>, the Kazakh word for "apple" and is often translated as "full of apples". In fact, the region surrounding Almaty is thought to be the ancestral home of the apple, and the wild <i lang="la">Malus sieversii</i> is considered a likely candidate for the ancestor of the modern domestic apple.
+  
+  </Panel>
+  </>)
+}
 
 export default App;
 

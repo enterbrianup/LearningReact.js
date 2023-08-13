@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { sculpture1 } from './data.js';
+import {forms} from './forms.js';
 import './App.css';
 // function App() {
 
@@ -484,58 +485,197 @@ import './App.css';
 
 // lets make a stateful app that shows list of sculpture from another file
 
-const App = () => {
-  const [index, setindex] = useState(0)
-  const [showMore, setshowMore] = useState(false)
-  // const handleClick =()=>{
-  //   setindex(index +1);
-  // }
-  const handleClick = () => {
-    if (index < sculpture1.length - 1) {
-      setindex(index + 1);
-    }
-    else {
-      setindex(0);
-    }
+// const App = () => {
+//   const [index, setindex] = useState(0)
+//   const [showMore, setshowMore] = useState(false)
+//   // const handleClick =()=>{
+//   //   setindex(index +1);
+//   // }
+//   const handleClick = () => {
+//     if (index < sculpture1.length - 1) {
+//       setindex(index + 1);
+//     }
+//     else {
+//       setindex(0);
+//     }
+//   }
+//   const handleMoreClick = () => {
+//     setshowMore(!showMore);
+//   }
+//   // const handlePrevClick = () =>{ setindex(index - 1);}
+//   const handlePrevClick = () => { 
+//     if(index > 0){
+//       setindex(index - 1) }
+
+//       else{
+//         setindex(sculpture1.length-1)
+//       }
+//     }
+//   let sculpture = sculpture1[index];
+//   return (
+//     <div className="box">
+//       <button onClick={handleClick}> Next </button>
+//       <h1>({index + 1} of {sculpture1.length})</h1>
+//       <h2>{sculpture.name}</h2>
+//       By
+//       {sculpture.artist}
+//       <br></br>
+//       <br></br>
+//       <button onClick={handleMoreClick}> {showMore ? 'Hide' : 'Show'}Show Details</button>
+//       <br></br>
+//       {showMore && <p>{sculpture.description}</p>}
+//       <br></br>
+//       <img src={sculpture.url}
+//         alt={sculpture.alt} />
+//       <br></br>
+//       <br></br>
+//       <button onClick={handlePrevClick}
+//       >Go to previous Sculpture</button>
+//     </div>
+
+
+//   )
+
+// }
+
+
+//  function App() {
+//   let firstName = '';
+//   let lastName = '';
+
+//   function handleFirstNameChange(e) {
+//     firstName = e.target.value;
+//   }
+
+//   function handleLastNameChange(e) {
+//     lastName = e.target.value;
+//   }
+
+//   function handleReset() {
+//     firstName = '';
+//     lastName = '';
+//   }
+
+//   return (
+//     <form onSubmit={e => e.preventDefault()}>
+//       <input
+//         placeholder="First name"
+//         value={firstName}
+//         onChange={handleFirstNameChange}
+//       />
+//       <input
+//         placeholder="Last name"
+//         value={lastName}
+//         onChange={handleLastNameChange}
+//       />
+//       <h1>Hi, {firstName} {lastName}</h1>
+//       <button onClick={handleReset}>Reset</button>
+//     </form>
+//   );
+// }
+
+
+// forms in react js welcome form interactive
+
+// const App = ()=>{
+//   const [firstName, setfirstName]= useState('');
+//   const [lastName, setlastName]= useState('');
+//   const [isSent, setisSent]=useState('false');
+//   const [message, setmessage]=useState('');
+
+
+//   const handleFirstNameChange =(e)=>{
+//     setfirstName(e.target.value);
+//   }
+//   const handlelastNameChange = (e) => {
+//     setlastName(e.target.value);
+//   }
+//   const handleReset = ()=>{
+//     setfirstName('')
+//     setlastName('')
+//     setmessage('')
+//   }
+//   if(isSent){
+//     // return <h1>Thank You</h1>
+//   }
+
+//  return(
+//   <div>
+//      <form onSubmit={e => {
+//        e.preventDefault();
+//       alert(`sending: "${message}"`);
+//       setisSent(true);}}>
+//        <input placeholder='Enter your first name'
+//         type="text"
+//         value={firstName}
+//         onChange={handleFirstNameChange}
+//         />     <input placeholder='Enter your last name'
+//         type="text" 
+//         value={lastName}
+//         onChange={handlelastNameChange}
+//        />
+
+//        <h1>Hi, {firstName} {lastName}</h1>
+//        {/* <button onClick={handleReset}>Reset</button> */}
+//       <br></br>
+//       <textarea 
+//       placeholder="Description about this form"
+//       value ={message} 
+//          onChange={e => setmessage(e.target.value)}/>
+//          <br />
+//        <button onClick={handleReset}>Reset</button> 
+//       <button type="submit">Submit message</button>
+      
+//     </form>
+//   </div>
+// )
+//  }
+ 
+  //  message box
+//  const App = () =>{
+//   const [isSent, setisSent]=useState(false);
+//   const [message, setmessage]=useState('');
+//   if(isSent){
+//     return<h1>Thank You</h1>
+//   }
+  
+
+//   return(
+//     <div>
+//       <form onSubmit={e => {e.preventDefault();
+//       alert(`sending: "${message}"`);
+//       setisSent(true);}}>
+//         <textarea
+//          placeholder="Message"
+//          value={message}
+//          onChange={e => setmessage(e.target.value)}/>
+//          <br />
+//          <button type ="submit">Send</button>
+//       </form>
+//     </div>
+//   )
+//  }
+
+
+// 
+
+const App = ()=>{
+  
+  const handleClick = ()=>{
+    console.log('clicked the button');
+    const name=prompt('What is your name?')
+    alert(`Hello, ${name}!`);
+   
   }
-  const handleMoreClick = () => {
-    setshowMore(!showMore);
-  }
-  // const handlePrevClick = () =>{ setindex(index - 1);}
-  const handlePrevClick = () => { 
-    if(index > 0){
-      setindex(index - 1) }
 
-      else{
-        setindex(sculpture1.length-1)
-      }
-    }
-  let sculpture = sculpture1[index];
-  return (
-    <div className="box">
-      <button onClick={handleClick}> Next </button>
-      <h1>({index + 1} of {sculpture1.length})</h1>
-      <h2>{sculpture.name}</h2>
-      By
-      {sculpture.artist}
-      <br></br>
-      <br></br>
-      <button onClick={handleMoreClick}> {showMore ? 'Hide' : 'Show'}Show Details</button>
-      <br></br>
-      {showMore && <p>{sculpture.description}</p>}
-      <br></br>
-      <img src={sculpture.url}
-        alt={sculpture.alt} />
-      <br></br>
-      <br></br>
-      <button onClick={handlePrevClick}
-      >Go to previous Sculpture</button>
-    </div>
+return (
 
-
-  )
-
+  <button onClick={handleClick}>Greet</button>
+ 
+);
 }
+
+
 
 export default App;
 

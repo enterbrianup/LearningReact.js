@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { sculpture1 } from './data.js';
 import {forms} from './forms.js';
+import {foods, filterItems} from './datafood.js';
 import './App.css';
 // function App() {
 
@@ -718,50 +719,108 @@ import './App.css';
 // Pass hardcoded data from the common parent.
 // Add state to the common parent and pass it down together with the event handlers.
 
-const SyncedInput = ({ label, value, onChange })=>{ 
+// const SyncedInput = ({ label, value, onChange })=>{ 
 
-  return (
-    <>
+//   return (
+//     <>
     
-    <label>
-      {label}
-      {'  '}
-        <input 
-        value={value} 
-        onChange={onChange}
-      />
-      </label>
-      </>
-  );
+//     <label>
+//       {label}
+//       {'  '}
+//         <input 
+//         value={value} 
+//         onChange={onChange}
+//       />
+//       </label>
+//       </>
+//   );
 
 
 
-}
-const App = ()=>{
+// }
+// const App = ()=>{
 
-  const [Text, setText] =useState('');
+//   const [Text, setText] =useState('');
   
-  const handleChange =(e)=>{
-    setText(e.target.value)
-  }
+//   const handleChange =(e)=>{
+//     setText(e.target.value)
+//   }
+//   return (
+//     <div>
+
+//      <h1>lifting the state up</h1>
+//        <SyncedInput 
+//        label="First input"
+//          value={Text}
+//          onChange={handleChange}
+//        />
+
+//       <SyncedInput
+//         label="second input"
+//         value={Text}
+//         onChange={handleChange}
+//          />
+//     </div>
+//   );
+     
+// }
+
+// filtering list
+
+const List= ({items})=>{
+  
   return (
-    <div>
+  <table>
+    <tbody>
+      {items.map(food =>(
+        <tr key ={food.id}>
+          <td>{food.name}</td>
+          <td>{food.description}</td>
 
-     <h1>lifting the state up</h1>
-       <SyncedInput 
-       label="First input"
-         value={Text}
-         onChange={handleChange}
+        </tr>
+))}
+    </tbody>
+  </table>
+);
+  
+}
+
+// child
+const SearchBar =({query,onChange})=>{
+
+
+ 
+ return (
+  <>
+  <label>
+    Search:{' '}
+    <input 
+    value={query}
+     onChange={onChange} 
        />
+  </label>
+  </>
+ )
+ 
+ 
+}
 
-      <SyncedInput
-        label="second input"
-        value={Text}
-        onChange={handleChange}
-         />
+// parent 
+const App =()=>{
+  const [query, setquery] = useState('');
+  const results = filterItems(foods, query);
+  const handleChange = (e) => {
+    setquery(e.target.value);
+  }
+  return(
+    <div>
+      <SearchBar 
+      query={query}
+      onChange={handleChange}/>
+      <hr />
+      <List items={results}/>
     </div>
   );
-     
 }
 
 

@@ -4,6 +4,9 @@ import { sculpture1 } from './data.js';
 import {forms} from './forms.js';
 import {foods, filterItems} from './datafood.js';
 import './App.css';
+import React from "react";
+
+
 // function App() {
 
 //   return (
@@ -767,63 +770,119 @@ import './App.css';
 
 // filtering list
 
-const List= ({items})=>{
+// const List= ({items})=>{
   
+//   return (
+//   <table>
+//     <tbody>
+//       {items.map(food =>(
+//         <tr key ={food.id}>
+//           <td>{food.name}</td>
+//           <td>{food.description}</td>
+
+//         </tr>
+// ))}
+//     </tbody>
+//   </table>
+// );
+  
+// }
+
+// // child
+// const SearchBar =({query,onChange})=>{
+
+
+ 
+//  return (
+//   <>
+//   <label>
+//     Search:{' '}
+//     <input 
+//     value={query}
+//      onChange={onChange} 
+//        />
+//   </label>
+//   </>
+//  )
+ 
+ 
+// }
+
+// // parent 
+// const App =()=>{
+//   const [query, setquery] = useState('');
+//   const results = filterItems(foods, query);
+//   const handleChange = (e) => {
+//     setquery(e.target.value);
+//   }
+//   return(
+//     <div>
+//       <SearchBar 
+//       query={query}
+//       onChange={handleChange}/>
+//       <hr />
+//       <List items={results}/>
+//     </div>
+//   );
+// }
+
+
+// export default App;
+
+
+
+// new project yeee react basic page
+
+const Footer =()=>{
+
   return (
-  <table>
-    <tbody>
-      {items.map(food =>(
-        <tr key ={food.id}>
-          <td>{food.name}</td>
-          <td>{food.description}</td>
-
-        </tr>
-))}
-    </tbody>
-  </table>
-);
-  
+    <>
+    <small className="footer">All rights are reserved to <a href="https://www.github.com/enterbrianup" target="_blank">anup</a></small>
+    </>
+  )
 }
+const Header = ()=>{
 
-// child
-const SearchBar =({query,onChange})=>{
-
-
- 
- return (
-  <>
-  <label>
-    Search:{' '}
-    <input 
-    value={query}
-     onChange={onChange} 
-       />
-  </label>
-  </>
- )
- 
- 
-}
-
-// parent 
-const App =()=>{
-  const [query, setquery] = useState('');
-  const results = filterItems(foods, query);
-  const handleChange = (e) => {
-    setquery(e.target.value);
-  }
   return(
-    <div>
-      <SearchBar 
-      query={query}
-      onChange={handleChange}/>
-      <hr />
-      <List items={results}/>
-    </div>
-  );
+    <>
+    <nav className="nav">
+    <img src="./logo192.png" />
+    
+    <ul className="nav_list">
+      <li>Pricing</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    </nav>
+
+    </>
+  )
 }
 
+const Page =()=>{
+
+  return( 
+    <>
+    <div className="main_content">
+    <h1>MY React Page</h1>
+    <ol className="ordered_list" >
+      <li>I like react</li>
+      <li>I like react</li>
+      <li>I like react</li>
+      <li>I like react</li>
+    </ol>
+      </div>
+    </>
+  )
+}
+const App = ()=>{
+
+  return(<>
+    <Header />
+  <Page />
+  <Footer />
+  </>
+  )
+}
 
 export default App;
-
-

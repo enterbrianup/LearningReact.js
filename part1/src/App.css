@@ -1,6 +1,48 @@
 .box {
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 400px;
-  margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
 }
+
+.nav{
+    background-color: antiquewhite;
+    justify-content: space-between;
+    display:flex;
+
+}
+.nav_list{
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+
+}
+
+.nav_list > li{
+    padding:10px;
+}
+
+img{
+
+ width:60px;
+}
+.main_content{
+
+   font-weight: 200;
+}
+.ordered_list{
+ text-align: justify;
+}
+
+.footer{
+    background-color:antiquewhite;
+    text-align: center;
+   
+}
+ 
+ a:hover{
+    color:green;
+ }
+ 
+
+

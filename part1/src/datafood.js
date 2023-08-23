@@ -32,5 +32,8 @@ export const foods = [{
     id: 5,
     name: 'Biryani',
     description:'Biryani is a mixed rice dish originating among the Muslims of South Asia.It is made with Indian spices, vegetables, rice, and usually some type of meat (chicken, beef, goat, lamb, prawn, or fish), or in some cases without any meat, and sometimes, in addition, eggs and potatoes.'
-  }];
+  },
+ {id: 6,
+name:'chaat',
+description: 'Made using fried Potato'}];
 

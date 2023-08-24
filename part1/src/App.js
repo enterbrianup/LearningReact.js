@@ -4,7 +4,9 @@ import { sculpture1 } from './data.js';
 import {forms} from './forms.js';
 import {foods, filterItems} from './datafood.js';
 import './App.css';
-import React from "react";
+// import React from "react";
+import Main from "./components/main.js"
+import Navbar from "./components/navbar.js"
 
 
 // function App() {
@@ -833,55 +835,105 @@ import React from "react";
 
 // new project yeee react basic page
 
-const Footer =()=>{
+// const Footer =()=>{
 
-  return (
-    <>
-    <small className="footer">All rights are reserved to <a href="https://www.github.com/enterbrianup" target="_blank">anup</a></small>
-    </>
-  )
-}
-const Header = ()=>{
+//   return (
+//     <>
+//     <small className="footer">All rights are reserved to <a href="https://www.github.com/enterbrianup" target="_blank">anup</a></small>
+//     </>
+//   )
+// }
+// const Header = ()=>{
+
+//   return(
+//     <>
+//     <nav className="nav">
+//     <img src="./logo192.png" />
+    
+//     <ul className="nav_list">
+//       <li>Pricing</li>
+//       <li>About</li>
+//       <li>Contact</li>
+//     </ul>
+//     </nav>
+
+//     </>
+//   )
+// }
+
+// const Page =()=>{
+
+//   return( 
+//     <>
+//     <div className="main_content">
+//     <h1>MY React Page</h1>
+//     <ol className="ordered_list" >
+//       <li>I like react</li>
+//       <li>I like react</li>
+//       <li>I like react</li>
+//       <li>I like react</li>
+//     </ol>
+//       </div>
+//     </>
+//   )
+// }
+// const App = ()=>{
+
+//   return(<>
+//     <Header />
+//   <Page />
+//   <Footer />
+//   </>
+//   )
+// }
+
+// export default App;
+
+
+
+//  ***********************************************88New project practice
+// const App =()=>{
+
+//   return( 
+//     <>
+//     <Navbar />
+    
+  
+
+//     <Main />
+//     </>
+//   )
+// }
+
+// export default App;
+
+import Image from "./components_business_card/Image.js"
+import About from "./components_business_card/About.js"
+import Interest from "./components_business_card/Interest.js"
+import Footer from "./components_business_card/footer.js"
+import Clickable from "./components_business_card/Buttons.js"
+import Details from "./components_business_card/details.js"
+
+
+
+const App =()=>{
 
   return(
     <>
-    <nav className="nav">
-    <img src="./logo192.png" />
-    
-    <ul className="nav_list">
-      <li>Pricing</li>
-      <li>About</li>
-      <li>Contact</li>
-    </ul>
-    </nav>
+    <div className="App_main">
+    <Image />
 
-    </>
-  )
-}
+    <Details />
 
-const Page =()=>{
+    <Clickable />
 
-  return( 
-    <>
-    <div className="main_content">
-    <h1>MY React Page</h1>
-    <ol className="ordered_list" >
-      <li>I like react</li>
-      <li>I like react</li>
-      <li>I like react</li>
-      <li>I like react</li>
-    </ol>
+    <About />
+
+    <Interest />
+
+    <Footer />
       </div>
     </>
-  )
-}
-const App = ()=>{
-
-  return(<>
-    <Header />
-  <Page />
-  <Footer />
-  </>
   )
 }
 

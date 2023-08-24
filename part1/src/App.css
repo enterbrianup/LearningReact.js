@@ -1,3 +1,5 @@
+ /*  
+  Basic project css part
 .box {
     border: 1px solid #ccc;
     padding: 20px;
@@ -46,3 +48,116 @@ img{
  
 
 
+*/
+
+      /* Basic Project 1 from free code camp  */
+/* body{
+    margin:0;
+    font-family: Inter,sans-serif;
+    background-color: #21222a;
+}
+
+nav{
+
+ display:flex;
+ align-items: center;
+ background-color: #242631;
+ height:90px;
+ padding: 30px 25px;
+
+}
+.Nav_content, .logo_text{
+margin:0;
+}
+
+img{
+    height: 30px;
+    margin-right: 10px;
+}
+
+.logo_text{
+    margin-right: auto;
+    color: #61Dafb;
+    font-weight: 700;
+
+}
+.Nav_content{
+    color:#deebf8;
+    font-weight: 600px; 
+}
+
+
+.main{
+padding:57px 37px;
+color: white;
+background-image: url(../public/logo512.png);
+background-repeat:no-repeat;
+background-position-x: right;
+background-position-y: bottom  75%;
+}
+
+.main_title{
+    margin:0;
+    font-size: 40px;
+    letter-spacing: 0.5rem;
+}
+.main_facts{
+    margin-top: 40px;
+     max-width: 400px; 
+}
+
+.main_facts > li{
+    padding-block: 10px;
+}
+.main_facts >li::marker{
+    font-size: 1.2rem;
+    color:#61dafb
+}
+
+ */
+
+
+
+
+     /* Business card Css written here c */
+
+     *{
+        margin:0;
+     }
+
+     img{
+        width:100px;
+        height:100px;
+        align-content: center;
+        padding: 50px;
+        margin-left: 150px;
+     }
+     
+     main{
+        color:white;
+        margin-bottom: 5px;
+     }
+
+     .footer{
+      
+      background-color: #23252C;
+      text-align: center;
+      align-items: center;
+      color:white;
+
+     }
+
+     .listed_logo{
+        list-style: none;
+        display: flex;
+        margin:1px;
+        padding: 10px;
+       
+
+     }
+     .App_main{
+        background-color: #23252C;
+        /* margin-right: 100px;
+        margin-left: 100px; */
+        border-radius: 5px;
+     }

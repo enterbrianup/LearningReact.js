@@ -922,7 +922,7 @@ const App =()=>{
     <>
     <div className="App_main">
     <Image />
-
+   <div className="Content_">
     <Details />
 
     <Clickable />
@@ -932,6 +932,7 @@ const App =()=>{
     <Interest />
 
     <Footer />
+        </div>
       </div>
     </>
   )

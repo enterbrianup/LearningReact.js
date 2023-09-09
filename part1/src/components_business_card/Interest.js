@@ -8,7 +8,7 @@ const Interest = () => {
 
                 <p>
                     Food expert, Music scholar, Reader, INternet fanatic, Murgi chaap,
-                    coding and Sports.
+                   coding and Sports.
                 </p>
 
             </main>

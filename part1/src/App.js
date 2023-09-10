@@ -907,35 +907,56 @@ import Navbar from "./components/navbar.js"
 
 // export default App;
 
-import Image from "./components_business_card/Image.js"
-import About from "./components_business_card/About.js"
-import Interest from "./components_business_card/Interest.js"
-import Footer from "./components_business_card/footer.js"
-import Clickable from "./components_business_card/Buttons.js"
-import Details from "./components_business_card/details.js"
+// Business id card 
+
+// import Image from "./components_business_card/Image.js"
+// import About from "./components_business_card/About.js"
+// import Interest from "./components_business_card/Interest.js"
+// import Footer from "./components_business_card/footer.js"
+// import Clickable from "./components_business_card/Buttons.js"
+// import Details from "./components_business_card/details.js"
 
 
 
-const App =()=>{
+// const App =()=>{
+
+//   return(
+//     <>
+//     <div className="App_main">
+//     <Image />
+//    <div className="Content_">
+//     <Details />
+
+//     <Clickable />
+
+//     <About />
+
+//     <Interest />
+
+//     <Footer />
+//         </div>
+//       </div>
+//     </>
+//   )
+// }
+
+// export default App;
+
+
+// Airbnb experience 
+
+import React from "react";
+import Airbnbnavbar from"./airbnbexp/components/airbnbnavbar.js"
+const App=()=>{
 
   return(
     <>
-    <div className="App_main">
-    <Image />
-   <div className="Content_">
-    <Details />
+    <div>
 
-    <Clickable />
-
-    <About />
-
-    <Interest />
-
-    <Footer />
-        </div>
-      </div>
+     <Airbnbnavbar />
+       
+    </div>
     </>
   )
 }
-
 export default App;

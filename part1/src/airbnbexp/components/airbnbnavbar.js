@@ -4,7 +4,10 @@ const Airbnbnavbar =()=>{
     
     return(
         <>
-        <img src="../images/airbnblogo.png" alt="airbnb image" />
+        <div>
+        <img src= {require("../images/airbnblogo.png")} alt="airbnb image" />
+          
+        </div>
         </>
     )
 }

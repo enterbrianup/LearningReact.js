@@ -1,13 +1,14 @@
 import React from "react";
 
+
 const Airbnbnavbar =()=>{
     
     return(
         <>
-        <div>
+        <nav>
         <img src= {require("../images/airbnblogo.png")} alt="airbnb image" />
           
-        </div>
+        </nav>
         </>
     )
 }

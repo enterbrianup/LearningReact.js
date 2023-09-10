@@ -120,7 +120,7 @@ background-position-y: bottom  75%;
 
 
      /* Business card Css written here c */
-
+/* 
      *{
         margin:0;
      }
@@ -166,4 +166,50 @@ background-position-y: bottom  75%;
         background-color: green;
         align-items: center;
         
+    } */
+
+    /* airbnb experience page css from here  */
+
+
+    *{
+        box-sizing:border-box;
     }
+    body{
+        margin:0;
+        font-family: sans-serif;
+    }
+    nav{
+        height: 70px;
+        display:flex;
+        /* background-color: blue; */
+        padding:20px 36px;
+        box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    }
+
+    section{
+        padding:20px;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero--photo{
+        max-width: 400px;
+        align-self: center;
+    }
+
+    .hero--header{
+      margin-bottom:16px;
+    }
+
+    .hero--text{
+        margin-top:0px;
+    }
+
+    .gray {
+        color:#918E9B;
+    }
+  
+
+

@@ -947,6 +947,8 @@ import Navbar from "./components/navbar.js"
 
 import React from "react";
 import Airbnbnavbar from"./airbnbexp/components/airbnbnavbar.js"
+import Hero from "./airbnbexp/components/hero.js"
+import Card from "./airbnbexp/components/card.js"
 const App=()=>{
 
   return(
@@ -954,6 +956,10 @@ const App=()=>{
     <div>
 
      <Airbnbnavbar />
+
+     <Hero />
+
+     <Card/>
        
     </div>
     </>

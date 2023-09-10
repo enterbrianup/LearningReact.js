@@ -6,8 +6,8 @@ const Card=()=>{
         <>
         <div className="card">
         <img src={require("../images/swim.png")} className="card--image"/>
-        <div className="card">
-         <img src={require("../images/star.png")} alt="star" className="card--str"/>
+        <div className="card--stats">
+         <img src={require("../images/star.png")} alt="star" className="card--star"/>
          <span>5.0</span>
          <span className="gray">(6).</span>
          <span children="gray">USA</span>
